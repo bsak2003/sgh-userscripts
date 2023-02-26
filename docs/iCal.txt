@@ -1,0 +1,9 @@
+tytuł: `[${x}] ${title}` where x = form (one letter)
+start, end => conversion from Date to ics format (maybe with breaks correction)
+
+organizer: teacher in usosFormat()
+
+location: room in text
+geo: room in geo
+
+description: group, 

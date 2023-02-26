@@ -1,0 +1,6 @@
+node_modules
+dist/*
+.parcel-cache
+src/plan.ics
+src/timetable.json
+docs/algorithm.txt

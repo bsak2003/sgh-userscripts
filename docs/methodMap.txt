@@ -1,0 +1,25 @@
+Schedule
+-> class Schedule 
+-> class ScheduleEvent
+-> class ScheduleEventDescription
+
+Form
+-> enum Form
+-> function parseForm()
+
+Program
+-> toString()
+-> fromDescription()
+
+Room
+-> fromWd()
+
+Signature
+-> usosSignature()
+-> wdSignature()
+-> fromUsosSignature()
+
+Teacher
+-> usosName()
+-> wdName()
+-> parseTeacherFromWD()
