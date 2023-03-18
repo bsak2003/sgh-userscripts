@@ -5,9 +5,19 @@
   "main": "dist/lib.js",
   "source": "src/test.ts",
   "targets":{
-    "browser":{
+    "calendar":{
       "source": "src/webExport.ts",
-      "includeNodeModules": true
+      "includeNodeModules": true,
+      "context": "browser",
+      "outputFormat": "global",
+      "optimize": false
+    },
+    "bridge":{
+      "source": "src/wdusosBridge.ts",
+      "includeNodeModules": true,
+      "context": "browser",
+      "outputFormat": "global",
+      "optimize": false
     }
   },
   "scripts": {
