@@ -1,8 +1,8 @@
-import { wdCourseData, getDataFromWD } from "../lib/wdCourseData";
-import { Teacher } from './teacher';
-import { fetchCycleId, fetchGroups } from '../lib/usosClient';
-import getWdSpan from '../lib/wdSpan';
-import { createGroupTable } from '../lib/wdTable';
+import { wdCourseData, getDataFromWD } from "../../lib/wdCourseData";
+import { Teacher } from '../export/teacher';
+import { fetchCycleId, fetchGroups } from '../../lib/usosClient';
+import getWdSpan from '../../lib/wdSpan';
+import { createGroupTable } from '../../lib/wdTable';
 
 const revealUsosData = function () {
     const wd = getDataFromWD();
