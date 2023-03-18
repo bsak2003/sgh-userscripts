@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 
-const extractUrl = function(onClick){
+const extractUrl = function(onClick : any){ //any workaround?
 	let fxStr = onClick.toString();
 	let url = fxStr.slice(fxStr.indexOf('http'), fxStr.lastIndexOf('\"')); // is that perfect? acceptable.
 	return url;

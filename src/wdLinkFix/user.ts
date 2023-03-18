@@ -1,4 +1,4 @@
-declare function $(any); // jQuery workaround?
+declare function $(any: any) : any; // jQuery workaround?
 
 const rplace = function(){
     $("ul.menu-prawe-1 li a.menu-prawe-link-1.terminy").off();

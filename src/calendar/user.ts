@@ -1,5 +1,5 @@
-declare function $(any); // jQuery workaround?
-declare function show_hide(idd: any)
+declare function $(any: any) : any; // jQuery workaround?
+declare function show_hide(idd: any) : null;
 
 const showCalendar = function (this: any) {
   let jump_date = new Date("2022-10-03T09:50:00");

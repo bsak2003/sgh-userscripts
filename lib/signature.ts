@@ -1,7 +1,7 @@
 class Signature {
-    courseId: string;
-    courseOfStudy: string;
-    mainTeacherId: string;
+    courseId: string = '';
+    courseOfStudy: string = '';
+    mainTeacherId: string = '';
 
     usosSignature(){
         if(this.courseId == null || this.courseOfStudy == null) throw new Error();

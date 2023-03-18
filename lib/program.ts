@@ -1,11 +1,11 @@
 class Program{
     // rodzaj, dziekanat, poziom, tryb
-    type: string;
-    department: string;
-    level: string;
-    courseOfStudy: string;
+    type: string = '';
+    department: string = '';
+    level: string = '';
+    courseOfStudy: string = '';
 
-    fieldOfStudy: string;
+    fieldOfStudy: string = '';
 
     toString(){
         return `${this.type}${this.department}${this.level}${this.courseOfStudy}-${this.fieldOfStudy}`;

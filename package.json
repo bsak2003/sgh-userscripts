@@ -6,18 +6,20 @@
   "source": "src/test.ts",
   "targets":{
     "calendar":{
-      "source": "src/webExport.ts",
+      "source": "src/export/lib.ts",
       "includeNodeModules": true,
       "context": "browser",
       "outputFormat": "global",
-      "optimize": false
+      "optimize": false,
+      "sourceMap": false
     },
     "bridge":{
-      "source": "src/wdusosBridge.ts",
+      "source": "src/bridge/lib.ts",
       "includeNodeModules": true,
       "context": "browser",
       "outputFormat": "global",
-      "optimize": false
+      "optimize": false,
+      "sourceMap": false
     }
   },
   "scripts": {

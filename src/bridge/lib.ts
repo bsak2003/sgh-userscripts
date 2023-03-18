@@ -1,14 +1,16 @@
-import { wdCourseData, getDataFromWD } from "../../lib/wdCourseData";
-import { Teacher } from '../export/teacher';
-import { fetchCycleId, fetchGroups } from '../../lib/usosClient';
-import getWdSpan from '../../lib/wdSpan';
-import { createGroupTable } from '../../lib/wdTable';
+import { wdCourseData, getDataFromWD } from "~/lib/wdCourseData";
+import { Teacher } from '~/lib/teacher';
+import { fetchCycleId, fetchGroups } from '~/lib/usosClient';
+import getWdSpan from '~/lib/wdSpan';
+import { getElementFromString } from "~/lib/wdSpan";
+import { createGroupTable } from './wdTable';
 
 const revealUsosData = function () {
     const wd = getDataFromWD();
     const teacher = Teacher.parseTeacherFromWD(wd.teacher);
   
     fetchCycleId(wd).then((cycleId) => {
+      if(cycleId == null) throw new Error();
       fetchGroups(cycleId, teacher.usosName()).then((groups) => {
         let div = document.querySelector('#usosData');
         if (groups.length > 0) {
@@ -16,7 +18,7 @@ const revealUsosData = function () {
           table.style.display = 'none';
           div?.appendChild(table);
         } else {
-          let span = getWdSpan('Brak grup w poprzednim cyklu akademickim.');
+          let span = getWdSpan(getElementFromString('Brak grup w poprzednim cyklu akademickim.'));
           span.style.display = 'none';
           div?.appendChild(span)
         }

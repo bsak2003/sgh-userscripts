@@ -1,4 +1,5 @@
-import { Schedule, ScheduleEvent, ScheduleEventDescription, parseDescription as parser } from "./schedule";
+/* broken
+import { Schedule, ScheduleEvent, ScheduleEventDescription, parseDescription as parser } from "~/lib/schedule";
 import * as timetable from './timetable.json';
 import IcsExport from "./iCalendar";
 
@@ -16,3 +17,4 @@ for(const element of timetable){
 const calendar = new IcsExport();
 calendar.fromSchedule(schedule);
 calendar.createEvents();
+*/

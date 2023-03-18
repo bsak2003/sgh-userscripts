@@ -1,6 +1,7 @@
-import getWdSpan from './wdSpan';
+import { usosCourseGroup } from '~/lib/usosCourseGroup';
+import getWdSpan from '~/lib/wdSpan';
 
-const insertRow = function (name, element) {
+const insertRow = function (name : HTMLElement, element : HTMLElement) {
     const div = document.querySelector('#strona-srodek-wyszukiwarka-tabela-c12-div');
     const table = div?.querySelector('table');
   
@@ -17,7 +18,7 @@ const insertRow = function (name, element) {
     }
   }
   
-  const createGroupTable = function (groups) {
+  const createGroupTable = function (groups : Array<usosCourseGroup>) {
     const border = '1px solid';
   
     const table = document.createElement('table'); table.style.border = border;
@@ -39,16 +40,16 @@ const insertRow = function (name, element) {
       let row = table.insertRow();
   
       let id = row.insertCell(); id.style.border = border;
-      id.innerText = x.groupNo;
+      id.innerText = x.groupNo.toString();
   
       let location = row.insertCell(); location.style.border = border;
       location.innerText = x.comment;
   
       let amount = row.insertCell(); amount.style.border = border;
-      amount.innerText = x.amount;
+      amount.innerText = x.amount.toString();
   
       let limit = row.insertCell(); limit.style.border = border;
-      limit.innerText = x.limit;
+      limit.innerText = x.limit.toString();
     });
   
     const footer = table.insertRow();
