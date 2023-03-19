@@ -1,5 +1,5 @@
-import { usosCourseGroup } from '~/lib/usosCourseGroup';
-import getWdSpan from '~/lib/wdSpan';
+import { usosCourseGroup } from '../../lib/usosCourseGroup';
+import getWdSpan from '../../lib/wdSpan';
 
 const insertRow = function (name : HTMLElement, element : HTMLElement) {
     const div = document.querySelector('#strona-srodek-wyszukiwarka-tabela-c12-div');

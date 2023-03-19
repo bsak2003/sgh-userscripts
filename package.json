@@ -5,7 +5,7 @@
   "main": "dist/lib.js",
   "source": "src/test.ts",
   "targets":{
-    "calendar":{
+    "export":{
       "source": "src/export/lib.ts",
       "includeNodeModules": true,
       "context": "browser",
@@ -23,7 +23,12 @@
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:bridge": "parcel build --target bridge && tsc ./src/bridge/user.ts -outfile ./dist/bridge/bridge.user.js",
+    "build:calendar": "tsc ./src/calendar/user.ts -outfile ./dist/calendar/calendar.user.js",
+    "build:export": "parcel build --target export && tsc ./src/export/user.ts -outfile ./dist/export/export.user.js",
+    "build:usosLinkFix": "tsc ./src/usosLinkFix/user.ts -outfile ./dist/usosLinkFix/usosLinkFix.user.js",
+    "build:wdLinkFix": "tsc ./src/wdLinkFix/user.ts -outfile ./dist/wdLinkFix/wdLinkFix.user.js"
   },
   "author": "",
   "license": "ISC",

@@ -1,9 +1,9 @@
-import { wdCourseData, getDataFromWD } from "~/lib/wdCourseData";
-import { Teacher } from '~/lib/teacher';
-import { fetchCycleId, fetchGroups } from '~/lib/usosClient';
-import getWdSpan from '~/lib/wdSpan';
-import { getElementFromString } from "~/lib/wdSpan";
-import { createGroupTable } from './wdTable';
+import { wdCourseData, getDataFromWD } from "../../lib/wdCourseData";
+import { Teacher } from '../../lib/teacher';
+import { fetchCycleId, fetchGroups } from '../../lib/usosClient';
+import getWdSpan from '../../lib/wdSpan';
+import { getElementFromString } from "../../lib/wdSpan";
+import { createGroupTable, insertRow } from './wdTable';
 
 const revealUsosData = function () {
     const wd = getDataFromWD();
@@ -26,34 +26,28 @@ const revealUsosData = function () {
     });
   }
 
-/* requires user.js
-
-// ==UserScript==
-// @name        WD-USOS Bridge
-// @namespace   bazik.xyz
-// @match       *://dziekanat.sgh.waw.pl/*
-// @grant       GM.xmlhttpRequest
-// @grant       GM_xmlhttpRequest
-// @version     1.0
-// @author      -
-// @description 11/10/2022, 12:35:35 AM
-// @require <OUTPUT>
-// ==/UserScript==
-
-
-if (document.location.toString().startsWith('https://dziekanat.sgh.waw.pl/wp2_liczebnosci.php?')) {
-  let div = document.createElement('div');
-  div.id = 'usosData';
-
-  let button = document.createElement('button');
-  button.onclick = function () { let usosData = document.querySelector('#usosData'); usosData.querySelector('span').style.display = 'block'; usosData.querySelector('button').style.display = 'none' };
-  button.innerText = 'USOS';
-
-  div.appendChild(button);
-
-  insertRow('Dane z USOS-a (ubiegły cykl)', div);
-
-  revealUsosData();
-}
-
-*/
+  if (
+    document.location
+      .toString()
+      .startsWith("https://dziekanat.sgh.waw.pl/wp2_liczebnosci.php?")
+  ) {
+    let div = document.createElement("div");
+    div.id = "usosData";
+  
+    let button = document.createElement("button");
+    button.onclick = function () {
+      let usosData = document.querySelector("#usosData");
+      let span = usosData?.querySelector("span");
+      let button = usosData?.querySelector("button");
+      if (span != null) span.style.display = "block";
+      if (button != null) button.style.display = "none";
+    };
+    button.innerText = "USOS";
+  
+    div.appendChild(button);
+  
+    insertRow(getElementFromString("Dane z USOS-a (ubiegły cykl)"), div);
+  
+    revealUsosData();
+  }
+  

@@ -1,3 +1,13 @@
+// ==UserScript==
+// @name        WD Link Fix
+// @namespace   bazik.xyz
+// @match       *://dziekanat.sgh.waw.pl/*
+// @grant       none
+// @version     1.0
+// @author      -
+// @description 11/10/2022, 12:35:35 AM
+// ==/UserScript==
+
 declare function $(any: any) : any; // jQuery workaround?
 
 const rplace = function(){
@@ -6,3 +16,5 @@ const rplace = function(){
     link.href = 'https://www.sgh.waw.pl/deklaracje-semestralne-studium-licencjackie';
     link.target = '_blank';
 } 
+
+rplace();

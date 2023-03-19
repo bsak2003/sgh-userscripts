@@ -1,3 +1,13 @@
+// ==UserScript==
+// @name        WD Timetable race condition fix
+// @namespace   bazik.xyz
+// @match       *://dziekanat.sgh.waw.pl/*
+// @grant       none
+// @version     1.0
+// @author      -
+// @description 11/18/2022, 10:13:47 PM
+// ==/UserScript==
+
 declare function $(any: any) : any; // jQuery workaround?
 declare function show_hide(idd: any) : null;
 
