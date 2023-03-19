@@ -5,7 +5,7 @@
 // @grant       none
 // @version     1.0
 // @author      -
-// @description 11/18/2022, 10:13:47 PM
+// @description	Change annyoing document.location="" redirects into standard <a href=""> links in USOSweb HTML timetable 
 // ==/UserScript==
 
 

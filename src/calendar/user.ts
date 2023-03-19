@@ -4,8 +4,8 @@
 // @match       *://dziekanat.sgh.waw.pl/*
 // @grant       none
 // @version     1.0
-// @author      -
-// @description 11/18/2022, 10:13:47 PM
+// @author      bsak2003
+// @description Fix awful race condtion on WD timetable page.
 // ==/UserScript==
 
 declare function $(any: any) : any; // jQuery workaround?

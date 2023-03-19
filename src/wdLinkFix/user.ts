@@ -5,7 +5,7 @@
 // @grant       none
 // @version     1.0
 // @author      -
-// @description 11/10/2022, 12:35:35 AM
+// @description Change annyoing document.location="" redirects into standard <a href=""> links on WD websites 
 // ==/UserScript==
 
 declare function $(any: any) : any; // jQuery workaround?

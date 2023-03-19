@@ -5,9 +5,9 @@
 // @grant       GM.xmlhttpRequest
 // @grant       GM_xmlhttpRequest
 // @version     1.0
-// @author      -
-// @description 11/10/2022, 12:35:35 AM
-// @require bundle.js
+// @author      bsak2003
+// @description Fetch & display course data from USOSweb on WD course selection screen!
+// @require     bundle.js
 // ==/UserScript==
 
-console.log('WD-USOS Bridge loaded!')
+console.log('WD-USOS Bridge loaded!');

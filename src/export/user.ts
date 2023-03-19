@@ -2,11 +2,11 @@
 // @name        Timetable Export to iCalendar
 // @namespace   bazik.xyz
 // @match       *://dziekanat.sgh.waw.pl/*
-// @grant none
+// @grant       none
 // @version     1.0
-// @author      -
-// @description 11/10/2022, 12:35:35 AM
-// @require <OUTPUT>
+// @author      bsak2003
+// @description Download your university schedule from WD as *.ics (iCalendar) file!
+// @require     bundle.js
 // ==/UserScript==
 
 console.log('Timetable Export to iCalendar loaded!');
