@@ -3,7 +3,7 @@ import {
   ScheduleEvent,
   ScheduleEventDescription,
   parseDescription as parser,
-} from "~/lib/schedule";
+} from "~/lib/common/schedule";
 import IcsExport from "./iCalendar";
 
 declare var json: Timetable[];

@@ -1,5 +1,5 @@
-import { usosCourseGroup } from "../../lib/usosCourseGroup";
-import getWdSpan from "../../lib/wdSpan";
+import { usosCourseGroup } from "~/lib/usos/usosCourseGroup";
+import getWdSpan from "~/lib/wd/wdSpan";
 
 const insertRow = function (name: HTMLElement, element: HTMLElement) {
   const div = document.querySelector(

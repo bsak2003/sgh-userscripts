@@ -1,6 +1,6 @@
 import * as ics from "ics";
 import { EventAttributes } from "ics";
-import { Schedule } from "~/lib/schedule";
+import { Schedule } from "~/lib/common/schedule";
 import fs from "fs";
 
 class IcsExport {

@@ -1,6 +1,6 @@
 import { usosCourseGroup } from "./usosCourseGroup";
-import htmlRequest from "./htmlRequest";
-import { wdCourseData } from "./wdCourseData";
+import htmlRequest from "~/lib/common/htmlRequest";
+import { wdCourseData } from "~/lib/wd/wdCourseData";
 
 const fetchCycleId = function (wd: wdCourseData) {
   const url = `https://usosweb.sgh.waw.pl/kontroler.php?_action=katalog2/przedmioty/pokazPrzedmiot&prz_kod=${wd.usosSignature()}`;
