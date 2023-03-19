@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/lib.js",
   "source": "src/test.ts",
-  "targets":{
-    "export":{
+  "targets": {
+    "export": {
       "source": "src/export/bundle.ts",
       "includeNodeModules": true,
       "context": "browser",
@@ -13,7 +13,7 @@
       "optimize": false,
       "sourceMap": false
     },
-    "bridge":{
+    "bridge": {
       "source": "src/bridge/bundle.ts",
       "includeNodeModules": true,
       "context": "browser",
