@@ -1,5 +1,5 @@
 {
-  "name": "sgh-calendar-export",
+  "name": "sgh-userscripts",
   "version": "1.0.0",
   "description": "",
   "main": "dist/lib.js",
