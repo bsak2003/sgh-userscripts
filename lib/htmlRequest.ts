@@ -1,15 +1,15 @@
-declare const GM : any;
-declare function GM_xmlhttpRequest(details: any) : any;
+declare const GM: any;
+declare function GM_xmlhttpRequest(details: any): any;
 
 // TODO install GM types, replace ANY with proper types
 
-const gmv4Request = function (url : string) : Promise<Document> {
+const gmv4Request = function (url: string): Promise<Document> {
   return new Promise(function (resolve, reject) {
     GM.xmlhttpRequest({
       method: "GET",
       url: url,
       responseType: "document",
-      onload: (xhr : any) => {
+      onload: (xhr: any) => {
         if (xhr.status >= 200 && xhr.status < 300) {
           resolve(xhr.response);
         } else {
@@ -19,7 +19,7 @@ const gmv4Request = function (url : string) : Promise<Document> {
           });
         }
       },
-      onerror: (xhr : any) => {
+      onerror: (xhr: any) => {
         reject({
           status: xhr.status,
           statusText: xhr.statusText,
@@ -29,12 +29,12 @@ const gmv4Request = function (url : string) : Promise<Document> {
   });
 };
 
-const gmv3Request = function (url : string) : Promise<Document> {
+const gmv3Request = function (url: string): Promise<Document> {
   return new Promise(function (resolve, reject) {
     GM_xmlhttpRequest({
       method: "GET",
       url: url,
-      onload: (xhr : any) => {
+      onload: (xhr: any) => {
         if (xhr.status >= 200 && xhr.status < 300) {
           let parser = new DOMParser();
           let html = parser.parseFromString(xhr.response, "text/html");
@@ -47,7 +47,7 @@ const gmv3Request = function (url : string) : Promise<Document> {
           });
         }
       },
-      onerror: (xhr : any) => {
+      onerror: (xhr: any) => {
         reject({
           status: xhr.status,
           statusText: xhr.statusText,
@@ -57,7 +57,7 @@ const gmv3Request = function (url : string) : Promise<Document> {
   });
 };
 
-const xhrRequest = function (url : string) : Promise<Document> {
+const xhrRequest = function (url: string): Promise<Document> {
   return new Promise(function (resolve, reject) {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
@@ -82,7 +82,7 @@ const xhrRequest = function (url : string) : Promise<Document> {
   });
 };
 
-const htmlRequest = function (url : string) : Promise<Document> {
+const htmlRequest = function (url: string): Promise<Document> {
   try {
     return gmv4Request(url);
   } catch {

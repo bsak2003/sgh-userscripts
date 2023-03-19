@@ -1,15 +1,15 @@
 // data acquired from view-source:https://usosweb.sgh.waw.pl/kontroler.php?_action=katalog2/jednostki/budynkiJednostki&jed_org_kod=SGH
 
 type Building = {
-    id: string;
-    nameHtml: string;
-    name: string;
-    address: string;
-    lat: number;
-    lng: number;
+  id: string;
+  nameHtml: string;
+  name: string;
+  address: string;
+  lat: number;
+  lng: number;
 };
 
-const buildings : Array<Building> = [
+const buildings: Array<Building> = [
   {
     id: "B",
     nameHtml: "<b>budynek B (Biblioteka)</b><br>Rakowiecka 22B",
@@ -101,8 +101,8 @@ const buildings : Array<Building> = [
 ];
 
 const map = new Map<string, Building>();
-for(const building of buildings){
-    map.set(building.id, building);
+for (const building of buildings) {
+  map.set(building.id, building);
 }
 
 export { Building, map as Buildings };

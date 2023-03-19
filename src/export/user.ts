@@ -9,4 +9,4 @@
 // @require     bundle.js
 // ==/UserScript==
 
-console.log('Timetable Export to iCalendar loaded!');
+console.log("Timetable Export to iCalendar loaded!");

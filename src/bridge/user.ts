@@ -10,4 +10,4 @@
 // @require     bundle.js
 // ==/UserScript==
 
-console.log('WD-USOS Bridge loaded!');
+console.log("WD-USOS Bridge loaded!");

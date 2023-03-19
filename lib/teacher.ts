@@ -27,7 +27,8 @@ class Teacher {
       if (teacher.title.endsWith(word)) return;
 
       if (word.startsWith("prof")) {
-        let next = arr[cur + 1]; console.log(word, next);
+        let next = arr[cur + 1];
+        console.log(word, next);
 
         if (
           next.startsWith("mgr") ||
