@@ -6,7 +6,7 @@
   "source": "src/test.ts",
   "targets":{
     "export":{
-      "source": "src/export/lib.ts",
+      "source": "src/export/bundle.ts",
       "includeNodeModules": true,
       "context": "browser",
       "outputFormat": "global",
@@ -14,7 +14,7 @@
       "sourceMap": false
     },
     "bridge":{
-      "source": "src/bridge/lib.ts",
+      "source": "src/bridge/bundle.ts",
       "includeNodeModules": true,
       "context": "browser",
       "outputFormat": "global",

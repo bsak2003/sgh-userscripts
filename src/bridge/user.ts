@@ -7,5 +7,7 @@
 // @version     1.0
 // @author      -
 // @description 11/10/2022, 12:35:35 AM
-// @require lib.js
+// @require bundle.js
 // ==/UserScript==
+
+console.log('WD-USOS Bridge loaded!')

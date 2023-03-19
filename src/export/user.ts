@@ -8,3 +8,5 @@
 // @description 11/10/2022, 12:35:35 AM
 // @require <OUTPUT>
 // ==/UserScript==
+
+console.log('Timetable Export to iCalendar loaded!');
